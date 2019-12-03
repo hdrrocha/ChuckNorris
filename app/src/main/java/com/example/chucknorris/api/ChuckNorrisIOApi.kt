@@ -9,11 +9,13 @@ import retrofit2.http.Path
 
 interface ChuckNorrisIOApi {
     companion object {
+//        https://api.chucknorris.io/jokes/categories
         const val URL = "https://api.chucknorris.io/"
     }
 
-    @GET("categories")
-    fun categories(): Observable<List<Categories>>
+//    https://api.chucknorris.io/jokes/
+    @GET("jokes/categories")
+    fun categories(): Observable<List<String>>
 
     @GET("jokes/random?category={category_id}")
     fun category(
