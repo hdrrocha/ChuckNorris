@@ -1,5 +1,6 @@
 package com.example.chucknorris.view.categories
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chucknorris.R
 import com.example.chucknorris.ViewModelFactory
 import com.example.chucknorris.view.categories.adapter.CategoriesAdapter
+import com.example.chucknorris.view.category.CategoryActivity
 import com.example.chucknorris.view_model.CategoriesViewModel
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
@@ -51,6 +53,9 @@ class CategoriesActivity : AppCompatActivity() {
 
     private fun partItemClicked(category: String) {
         Toast.makeText(this, category, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this.baseContext, CategoryActivity::class.java)
+        intent.putExtra("category", category)
+        startActivity(intent)
     }
 
 }

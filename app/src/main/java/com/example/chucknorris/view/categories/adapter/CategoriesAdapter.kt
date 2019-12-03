@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chucknorris.R
 import kotlinx.android.synthetic.main.category_item.view.*
 
-
 class CategoriesAdapter(val clickListener: ((String) -> Unit)?) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
     var categories: List<String>
 

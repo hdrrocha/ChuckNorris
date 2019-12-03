@@ -3,6 +3,7 @@ package com.example.chucknorris
 import android.content.Context
 import com.example.chucknorris.api.NetworkModule
 import com.example.chucknorris.view.categories.CategoriesActivity
+import com.example.chucknorris.view.category.CategoryActivity
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -22,6 +23,9 @@ class AppModule
 abstract class AndroidInjectorsModule {
     @ContributesAndroidInjector
     abstract fun categoriesActivity(): CategoriesActivity
+
+    @ContributesAndroidInjector
+    abstract fun categoryActivity(): CategoryActivity
 }
 
 @Singleton

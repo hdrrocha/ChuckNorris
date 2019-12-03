@@ -1,5 +1,6 @@
 package com.example.chucknorris.api
 
+import android.util.Log
 import com.example.chucknorris.model.Categories
 import com.example.chucknorris.model.Category
 import io.reactivex.Observable
